@@ -1,0 +1,33 @@
+[gd_resource type="Theme" load_steps=4 format=3 uid="uid://dequcl5guk850"]
+
+[ext_resource type="FontFile" uid="uid://c5i0b168dxyxu" path="res://assets/fonts/LuckiestGuy-Regular.ttf" id="1_ch4ms"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2g4i4"]
+bg_color = Color(0, 0.439216, 0.0117647, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1.8049e-08, 0.347037, 0.00716802, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mmhj7"]
+bg_color = Color(5.05373e-07, 0.624507, 0.0284801, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(6.97896e-07, 0.44016, 0.0128871, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[resource]
+Button/font_sizes/font_size = 48
+Button/fonts/font = ExtResource("1_ch4ms")
+Button/styles/hover = SubResource("StyleBoxFlat_2g4i4")
+Button/styles/normal = SubResource("StyleBoxFlat_mmhj7")
