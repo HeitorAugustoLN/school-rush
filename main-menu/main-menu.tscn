@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://u7dbh63nuy5s"]
+[gd_scene load_steps=3 format=3 uid="uid://u7dbh63nuy5s"]
 
 [ext_resource type="Theme" uid="uid://dequcl5guk850" path="res://main-menu/main-menu.tres" id="1_2g4i4"]
+[ext_resource type="Script" uid="uid://b8hx73mogi30j" path="res://main-menu/main-menu.gd" id="1_6u48k"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -9,6 +10,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_6u48k")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
@@ -32,3 +34,5 @@ text = "JOGAR"
 layout_mode = 2
 theme = ExtResource("1_2g4i4")
 text = "SAIR"
+
+[connection signal="pressed" from="VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]
