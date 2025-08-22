@@ -1,20 +1,14 @@
 {
   perSystem =
     {
-      pkgs,
       config,
-      self',
+      pkgs,
       ...
     }:
     {
-      devShells = {
-        default = pkgs.mkShell {
-          packages = [
-            pkgs.godot-mono
-            self'.packages.write-flake
-          ];
-          shellHook = config.pre-commit.installationScript;
-        };
+      devShells.default = pkgs.mkShell {
+        packages = [ pkgs.godot-mono ];
+        shellHook = config.pre-commit.installationScript;
       };
     };
 }

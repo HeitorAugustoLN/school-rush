@@ -7,38 +7,28 @@
       owner = "edolstra";
       repo = "flake-compat";
     };
+
     flake-parts = {
       type = "github";
       owner = "hercules-ci";
       repo = "flake-parts";
     };
 
-    flake-file = {
+    git-hooks = {
       type = "github";
-      owner = "vic";
-      repo = "flake-file";
-      ref = "pull/27/head";
+      owner = "cachix";
+      repo = "git-hooks.nix";
+
+      inputs = {
+        flake-compat.follows = "flake-compat";
+        nixpkgs.follows = "nixpkgs";
+      };
     };
 
     import-tree = {
       type = "github";
       owner = "vic";
       repo = "import-tree";
-    };
-    git-hooks = {
-      type = "github";
-      owner = "cachix";
-      repo = "git-hooks.nix";
-      inputs = {
-        flake-compat.follows = "flake-compat";
-        nixpkgs.follows = "nixpkgs";
-      };
-    };
-    treefmt-nix = {
-      type = "github";
-      owner = "numtide";
-      repo = "treefmt-nix";
-      inputs.nixpkgs.follows = "nixpkgs";
     };
 
     nixpkgs = {
@@ -48,7 +38,18 @@
       ref = "nixos-unstable";
     };
 
-    systems.url = "github:nix-systems/default";
+    systems = {
+      type = "github";
+      owner = "nix-systems";
+      repo = "default";
+    };
+
+    treefmt-nix = {
+      type = "github";
+      owner = "numtide";
+      repo = "treefmt-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
