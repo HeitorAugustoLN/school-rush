@@ -4,7 +4,7 @@ const MOVE_SPEED: float = 8.0
 const JUMP_VELOCITY: float = 8.0
 const GRAVITY: float = 24.0
 
-const LANES: Array[int] = [-2, 0, 2]
+const LANES: Array[int] = [-3, 0, 3]
 var current_lane: int = 1
 var target_lane: int = 1
 
