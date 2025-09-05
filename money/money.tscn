@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://brt5hoo8xlhkr"]
+
+[ext_resource type="Script" uid="uid://ejid0vs63iqb" path="res://money/money.gd" id="1_adna3"]
+[ext_resource type="PackedScene" uid="uid://c42ihf784kwbj" path="res://money/money.blend" id="1_tqq5q"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_adna3"]
+size = Vector3(1, 1.40723, 1.96277)
+
+[node name="Money" type="Area3D"]
+script = ExtResource("1_adna3")
+
+[node name="money" parent="." instance=ExtResource("1_tqq5q")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.729004, 0.00482178)
+shape = SubResource("BoxShape3D_adna3")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

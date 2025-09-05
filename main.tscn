@@ -4,8 +4,10 @@
 [ext_resource type="PackedScene" uid="uid://blhaxhw02fskr" path="res://corridor/corridor.tscn" id="1_ig7tw"]
 [ext_resource type="PackedScene" uid="uid://cegd75t1valt" path="res://player/player.tscn" id="2_0xm2m"]
 
-[node name="Main" type="Node3D"]
+[node name="Main" type="Node3D" node_paths=PackedStringArray("corridor_timer", "money_timer")]
 script = ExtResource("1_h2yge")
+corridor_timer = NodePath("CorridorTimer")
+money_timer = NodePath("MoneyTimer")
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.939693, 0.34202, 0, -0.34202, 0.939693, 0, 9.58359, 29.901)
@@ -16,3 +18,13 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 
 
 [node name="Player" parent="." instance=ExtResource("2_0xm2m")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.20544, 0)
+
+[node name="CorridorTimer" type="Timer" parent="."]
+wait_time = 2.0
+autostart = true
+
+[node name="MoneyTimer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="CorridorTimer" to="." method="_on_corridor_timer_timeout"]
+[connection signal="timeout" from="MoneyTimer" to="." method="_on_money_timer_timeout"]
