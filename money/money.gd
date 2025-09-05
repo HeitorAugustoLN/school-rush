@@ -1,4 +1,4 @@
-extends Node3D
+extends Area3D
 
 var timer: Timer = Timer.new()
 
