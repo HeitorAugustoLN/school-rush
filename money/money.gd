@@ -10,8 +10,13 @@ func _ready() -> void:
 	add_child(timer)
 
 
-func _process(delta: float) -> void:
+func _process(delta) -> void:
 	global_translate(Vector3(0, 0, 0.25))
+	rotate_y(5 * delta)
+
+
+func _on_body_entered(body: Node3D) -> void:
+	queue_free()
 
 
 func _on_timer_timeout() -> void:
