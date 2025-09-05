@@ -41,6 +41,5 @@ func _on_money_timer_timeout() -> void:
 		for n in randf_range(4, 10):
 			var money_instance: Area3D = money.instantiate()
 			add_child(money_instance)
-			money_instance.global_transform.origin = Vector3(
-				LANES[random_line_num], 1.0, startz + i * 2.5
+				LANES[random_line_num], 1.0, startz + n * 2.5
 			)
