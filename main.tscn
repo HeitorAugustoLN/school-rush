@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://cm2tb6483idoi"]
+[gd_scene load_steps=5 format=3 uid="uid://cm2tb6483idoi"]
 
 [ext_resource type="Script" uid="uid://dro3hfrvr4muv" path="res://main.gd" id="1_h2yge"]
 [ext_resource type="PackedScene" uid="uid://blhaxhw02fskr" path="res://corridor/corridor.tscn" id="1_ig7tw"]
 [ext_resource type="PackedScene" uid="uid://cegd75t1valt" path="res://player/player.tscn" id="2_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://saiuhb5lgtgv" path="res://hud/hud.tscn" id="4_1bvp3"]
 
 [node name="Main" type="Node3D" node_paths=PackedStringArray("corridor_timer", "money_timer")]
 script = ExtResource("1_h2yge")
@@ -25,6 +26,8 @@ autostart = true
 
 [node name="MoneyTimer" type="Timer" parent="."]
 autostart = true
+
+[node name="HUD" parent="." instance=ExtResource("4_1bvp3")]
 
 [connection signal="timeout" from="CorridorTimer" to="." method="_on_corridor_timer_timeout"]
 [connection signal="timeout" from="MoneyTimer" to="." method="_on_money_timer_timeout"]

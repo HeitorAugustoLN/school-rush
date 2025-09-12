@@ -18,6 +18,10 @@ func _ready() -> void:
 	starting_point = global_transform.origin
 
 
+func _process(delta: float) -> void:
+	Score.add_score(int(delta * 100))
+
+
 func _physics_process(delta: float) -> void:
 	var direction: Vector3 = Vector3.ZERO
 

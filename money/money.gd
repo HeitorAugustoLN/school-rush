@@ -17,6 +17,8 @@ func _process(delta) -> void:
 
 func _on_body_entered(body: Node3D) -> void:
 	queue_free()
+	Score.add_money()
+	Score.add_score(100)
 
 
 func _on_timer_timeout() -> void:
