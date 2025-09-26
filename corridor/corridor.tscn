@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://blhaxhw02fskr"]
+[gd_scene load_steps=5 format=3 uid="uid://blhaxhw02fskr"]
 
 [ext_resource type="PackedScene" uid="uid://km8d6dw57o8u" path="res://corridor/corridor.blend" id="1_6ss0s"]
 [ext_resource type="Script" uid="uid://do08gx0np5yg4" path="res://corridor/corridor.gd" id="1_qlr38"]
+[ext_resource type="PackedScene" uid="uid://bqlfml3jsb3lg" path="res://obstacles/lockers.blend" id="3_32vet"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_6ss0s"]
 size = Vector3(33.8262, 1, 9.62524)
@@ -22,3 +23,33 @@ transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 22.
 light_energy = 20.0
 spot_range = 31.2253
 spot_angle = 61.875
+
+[node name="lockers" parent="." instance=ExtResource("3_32vet")]
+transform = Transform3D(0.00218849, 0, -0.99249, 0, 1, 0, 0.22674, 0, 0.00957951, 0, -1.04866, -4.56624)
+
+[node name="lockers5" parent="." instance=ExtResource("3_32vet")]
+transform = Transform3D(0.0062363, 0, 0.992161, 0, 1, 0, -0.226665, 0, 0.0272977, 0, -1.04866, 4.67252)
+
+[node name="lockers6" parent="." instance=ExtResource("3_32vet")]
+transform = Transform3D(0.0062363, 0, 0.992161, 0, 1, 0, -0.226665, 0, 0.0272977, -4.34245, -1.04866, 4.67252)
+
+[node name="lockers7" parent="." instance=ExtResource("3_32vet")]
+transform = Transform3D(0.0062363, 0, 0.992161, 0, 1, 0, -0.226665, 0, 0.0272977, 3.88481, -1.04866, 4.67252)
+
+[node name="lockers8" parent="." instance=ExtResource("3_32vet")]
+transform = Transform3D(0.0062363, 0, 0.992161, 0, 1, 0, -0.226665, 0, 0.0272977, 8.18032, -1.04866, 4.67252)
+
+[node name="lockers9" parent="." instance=ExtResource("3_32vet")]
+transform = Transform3D(0.0062363, 0, 0.992161, 0, 1, 0, -0.226665, 0, 0.0272977, 12.4123, -1.04866, 4.67252)
+
+[node name="lockers10" parent="." instance=ExtResource("3_32vet")]
+transform = Transform3D(0.0062363, 0, 0.992161, 0, 1, 0, -0.226665, 0, 0.0272977, 12.4123, -1.04866, 4.67252)
+
+[node name="lockers2" parent="." instance=ExtResource("3_32vet")]
+transform = Transform3D(0.00218849, 0, -0.99249, 0, 1, 0, 0.22674, 0, 0.00957951, -4.28215, -1.04866, -4.56624)
+
+[node name="lockers3" parent="." instance=ExtResource("3_32vet")]
+transform = Transform3D(0.00218849, 0, -0.99249, 0, 1, 0, 0.22674, 0, 0.00957951, -8.52908, -1.04866, -4.56624)
+
+[node name="lockers4" parent="." instance=ExtResource("3_32vet")]
+transform = Transform3D(0.00218849, 0, -0.99249, 0, 1, 0, 0.22674, 0, 0.00957951, -12.7443, -1.04866, -4.56624)

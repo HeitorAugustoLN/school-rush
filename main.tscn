@@ -5,10 +5,11 @@
 [ext_resource type="PackedScene" uid="uid://cegd75t1valt" path="res://player/player.tscn" id="2_0xm2m"]
 [ext_resource type="PackedScene" uid="uid://saiuhb5lgtgv" path="res://hud/hud.tscn" id="4_1bvp3"]
 
-[node name="Main" type="Node3D" node_paths=PackedStringArray("corridor_timer", "money_timer")]
+[node name="Main" type="Node3D" node_paths=PackedStringArray("corridor_timer", "money_timer", "obstacle_timer")]
 script = ExtResource("1_h2yge")
 corridor_timer = NodePath("CorridorTimer")
 money_timer = NodePath("MoneyTimer")
+obstacle_timer = NodePath("ObstacleTimer")
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.939693, 0.34202, 0, -0.34202, 0.939693, 0, 9.58359, 29.901)
@@ -25,9 +26,15 @@ wait_time = 2.0
 autostart = true
 
 [node name="MoneyTimer" type="Timer" parent="."]
+wait_time = 2.0
+autostart = true
+
+[node name="ObstacleTimer" type="Timer" parent="."]
+wait_time = 4.0
 autostart = true
 
 [node name="HUD" parent="." instance=ExtResource("4_1bvp3")]
 
 [connection signal="timeout" from="CorridorTimer" to="." method="_on_corridor_timer_timeout"]
 [connection signal="timeout" from="MoneyTimer" to="." method="_on_money_timer_timeout"]
+[connection signal="timeout" from="ObstacleTimer" to="." method="_on_obstacle_timer_timeout"]

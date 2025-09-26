@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://dfh7n0bgn22xs"
-path="res://.godot/imported/bonequinha hehe.blend-98aee8f83dad9ff3782567fe373a6d8d.scn"
+uid="uid://dausj220mb8vr"
+path="res://.godot/imported/chair.blend-48032fa7938db3d6a3d9ba963d5b7612.scn"
 
 [deps]
 
-source_file="res://player/bonequinha hehe.blend"
-dest_files=["res://.godot/imported/bonequinha hehe.blend-98aee8f83dad9ff3782567fe373a6d8d.scn"]
+source_file="res://obstacles/chair.blend"
+dest_files=["res://.godot/imported/chair.blend-48032fa7938db3d6a3d9ba963d5b7612.scn"]
 
 [params]
 
