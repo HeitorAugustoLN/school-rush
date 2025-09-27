@@ -10,9 +10,11 @@ extends Node3D
 
 var startz: float = -36
 const LANES: Array[int] = [-3, 0, 3]
+var last_obstacle_lane: int = -1
 
 
 func _ready() -> void:
+	randomize()
 	var corridor_asset = corridor.instantiate()
 	add_child(corridor_asset)
 	corridor_asset.global_transform.origin = Vector3(0, 0, startz)
@@ -27,40 +29,35 @@ func _on_corridor_timer_timeout() -> void:
 
 
 func _on_money_timer_timeout() -> void:
-	randomize()
-	obstacle_timer.wait_time = randi() % 5 + 1
+	var lane_index = randi() % LANES.size()
+	var attempts = 0
+	while lane_index == last_obstacle_lane and attempts < 5:
+		lane_index = randi() % LANES.size()
+		attempts += 1
 
-	var random_line_num = randi() % 3
-	var prev_rand_line_n = null
+	var lane_pos = LANES[lane_index]
 
-	var line_count: int = randi() % 4 + 1
-
-	for i in line_count:
-		while prev_rand_line_n != null and prev_rand_line_n == random_line_num:
-			random_line_num = randi() % 3
-		prev_rand_line_n = random_line_num
-
-		for n in randf_range(4, 6):
-			var money_instance: Area3D = money.instantiate()
-			add_child(money_instance)
-			money_instance.global_transform.origin = Vector3(
-				LANES[random_line_num], 1.0, startz + n * 2.5
-			)
+	var trail_length = randi_range(5, 10)
+	for i in range(trail_length):
+		var money_instance: Area3D = money.instantiate()
+		add_child(money_instance)
+		var z_pos = startz + i * 2.5
+		money_instance.global_transform.origin = Vector3(lane_pos, 1.0, z_pos)
 
 
 func _on_obstacle_timer_timeout() -> void:
-	randomize()
-	obstacle_timer.wait_time = randi() % 5 + 1
+	obstacle_timer.wait_time = randf_range(2.0, 4.0)
 
-	var random_line_num = randi() % 3
-	var prev_rand_line_n = null
+	var lane_index = randi() % LANES.size()
+	var attempts = 0
+	while lane_index == last_obstacle_lane and attempts < 5:
+		lane_index = randi() % LANES.size()
+		attempts += 1
+	last_obstacle_lane = lane_index
 
-	while prev_rand_line_n != null and prev_rand_line_n == random_line_num:
-		random_line_num = randi() % 3
-	prev_rand_line_n = random_line_num
+	var lane_pos = LANES[lane_index]
 
 	var obstacle_instance: Area3D = obstacle.instantiate()
 	add_child(obstacle_instance)
-	obstacle_instance.global_transform.origin = Vector3(
-		LANES[random_line_num], 1.0, startz + 1 * 2.5
-	)
+	var z_pos = startz + randf_range(0, 5)
+	obstacle_instance.global_transform.origin = Vector3(lane_pos, 1.0, z_pos)
