@@ -1,5 +1,7 @@
 extends CharacterBody3D
 
+@onready var animation_player: AnimationPlayer = $"player/AnimationPlayer"
+
 const MOVE_SPEED: float = 8.0
 const JUMP_VELOCITY: float = 8.0
 const GRAVITY: float = 24.0
@@ -16,6 +18,8 @@ var is_dead: bool = false
 
 func _ready() -> void:
 	starting_point = global_transform.origin
+	animation_player.get_animation("mixamo_com").loop_mode = Animation.LOOP_LINEAR
+	animation_player.play("mixamo_com")
 
 
 func _process(delta: float) -> void:
