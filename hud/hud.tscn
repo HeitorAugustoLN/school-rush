@@ -35,3 +35,18 @@ offset_right = 101.0
 offset_bottom = 46.0
 theme = ExtResource("1_2gk58")
 text = "69420"
+
+[node name="MathQuestion" type="Label" parent="."]
+visible = false
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -299.0
+offset_top = 100.0
+offset_right = 299.0
+offset_bottom = 201.0
+grow_horizontal = 2
+theme = ExtResource("1_2gk58")
+theme_override_font_sizes/font_size = 80
+text = "10 + 10 = ?"
+horizontal_alignment = 1

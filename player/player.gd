@@ -17,6 +17,7 @@ var is_dead: bool = false
 
 
 func _ready() -> void:
+	add_to_group("player")
 	starting_point = global_transform.origin
 	animation_player.get_animation("mixamo_com").loop_mode = Animation.LOOP_LINEAR
 	animation_player.play("mixamo_com")

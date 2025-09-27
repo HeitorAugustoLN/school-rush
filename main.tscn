@@ -1,12 +1,14 @@
-[gd_scene load_steps=5 format=3 uid="uid://cm2tb6483idoi"]
+[gd_scene load_steps=6 format=3 uid="uid://cm2tb6483idoi"]
 
 [ext_resource type="Script" uid="uid://dro3hfrvr4muv" path="res://main.gd" id="1_h2yge"]
 [ext_resource type="PackedScene" uid="uid://blhaxhw02fskr" path="res://corridor/corridor.tscn" id="1_ig7tw"]
 [ext_resource type="PackedScene" uid="uid://cegd75t1valt" path="res://player/player.tscn" id="2_0xm2m"]
 [ext_resource type="PackedScene" uid="uid://saiuhb5lgtgv" path="res://hud/hud.tscn" id="4_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://b1y2w3x4y506" path="res://math/answer.tscn" id="5_qwert"]
 
 [node name="Main" type="Node3D" node_paths=PackedStringArray("corridor_timer", "money_timer", "obstacle_timer")]
 script = ExtResource("1_h2yge")
+answer = ExtResource("5_qwert")
 corridor_timer = NodePath("CorridorTimer")
 money_timer = NodePath("MoneyTimer")
 obstacle_timer = NodePath("ObstacleTimer")
