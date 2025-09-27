@@ -1,17 +1,17 @@
 [gd_scene load_steps=4 format=3 uid="uid://cegd75t1valt"]
 
 [ext_resource type="Script" uid="uid://dushow1erjpa" path="res://player/player.gd" id="1_rkbax"]
-[ext_resource type="PackedScene" uid="uid://dfh7n0bgn22xs" path="res://player/bonequinha hehe.blend" id="2_rkbax"]
+[ext_resource type="PackedScene" uid="uid://ddfewtjk1qwbs" path="res://player/player.fbx" id="2_rkbax"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_rkbax"]
-height = 1.86723
+height = 3.28854
 
 [node name="Player" type="CharacterBody3D"]
 script = ExtResource("1_rkbax")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1.05768, 0, 0, 0, 1.05768, 0, 0, 0, 1.05768, 0, 0, 0)
+transform = Transform3D(1.05768, 0, 0, 0, 1.05768, 0, 0, 0, 1.05768, -0.0544378, 1.67054, 0)
 shape = SubResource("CapsuleShape3D_rkbax")
 
-[node name="bonequinha hehe" parent="." instance=ExtResource("2_rkbax")]
-transform = Transform3D(-2.18557e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.18557e-08, -0.659692, 0, -1.60493)
+[node name="player" parent="." instance=ExtResource("2_rkbax")]
+transform = Transform3D(-0.6, 0, -5.24537e-08, 0, 0.6, 0, 5.24537e-08, 0, -0.6, 0, 0, 0)

@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://dfh7n0bgn22xs"
-path="res://.godot/imported/bonequinha hehe.blend-98aee8f83dad9ff3782567fe373a6d8d.scn"
+uid="uid://bqlfml3jsb3lg"
+path="res://.godot/imported/lockers.blend-40bfcc87bb3f411c8b658f4ada94cb39.scn"
 
 [deps]
 
-source_file="res://player/bonequinha hehe.blend"
-dest_files=["res://.godot/imported/bonequinha hehe.blend-98aee8f83dad9ff3782567fe373a6d8d.scn"]
+source_file="res://obstacles/lockers.blend"
+dest_files=["res://.godot/imported/lockers.blend-40bfcc87bb3f411c8b658f4ada94cb39.scn"]
 
 [params]
 

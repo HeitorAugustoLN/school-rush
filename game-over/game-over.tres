@@ -1,0 +1,33 @@
+[gd_resource type="Theme" load_steps=4 format=3 uid="uid://b3sbtlrh3rexf"]
+
+[ext_resource type="FontFile" uid="uid://c5i0b168dxyxu" path="res://assets/fonts/LuckiestGuy-Regular.ttf" id="1_c2b23"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3mwp5"]
+content_margin_left = 5.0
+content_margin_top = 15.0
+content_margin_right = 5.0
+content_margin_bottom = 5.0
+bg_color = Color(0, 0.439216, 0.0117647, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c2b23"]
+content_margin_left = 5.0
+content_margin_top = 15.0
+content_margin_right = 5.0
+content_margin_bottom = 5.0
+bg_color = Color(0, 0.623529, 0.027451, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[resource]
+Button/fonts/font = ExtResource("1_c2b23")
+Button/styles/hover = SubResource("StyleBoxFlat_3mwp5")
+Button/styles/normal = SubResource("StyleBoxFlat_c2b23")
+Button/styles/pressed = null
+Label/constants/outline_size = 20
+Label/fonts/font = ExtResource("1_c2b23")
