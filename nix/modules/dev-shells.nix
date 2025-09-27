@@ -10,7 +10,7 @@
         packages = [
           pkgs.blender
           pkgs.godot
-          pkgs.godot-export-templates
+          pkgs.godot-export-templates-bin
         ];
 
         shellHook = config.pre-commit.installationScript;
