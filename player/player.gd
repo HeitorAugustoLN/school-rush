@@ -4,7 +4,7 @@ extends CharacterBody3D
 
 const MOVE_SPEED: float = 8.0
 const JUMP_VELOCITY: float = 8.0
-const GRAVITY: float = 24.0
+const GRAVITY: float = 12.0
 
 const LANES: Array[int] = [-3, 0, 3]
 var current_lane: int = 1

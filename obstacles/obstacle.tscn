@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://dausj220mb8vr" path="res://obstacles/chair.blend" id="2_34vs7"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_34vs7"]
-size = Vector3(1, 1.9669, 3.32947)
+size = Vector3(1, 1.4107, 3.32947)
 
 [node name="Obstacle" type="Area3D"]
 script = ExtResource("1_34vs7")
@@ -19,7 +19,7 @@ transform = Transform3D(1.91069e-15, 4.37114e-08, 1, 1, -4.37114e-08, 0, 4.37114
 visible = false
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.05956, 0.0841675)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.781458, 0.0841675)
 shape = SubResource("BoxShape3D_34vs7")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
